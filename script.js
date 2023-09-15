@@ -55,7 +55,7 @@ function getRandomColor() {
   }
   
   // Delay showing the pop-up only if the user stays for more than 2 seconds
-  let timeoutId = setTimeout(showPopup, 4000);
+  let timeoutId = setTimeout(showPopup, 6000);
   
   // Listen for user interaction events (e.g., mousemove, keydown)
   document.addEventListener("mousemove", handleUserInteraction);
