@@ -41,7 +41,7 @@ function getRandomColor() {
     popup.innerHTML = `
       <div class="popup-content">
         <h2>Under Maintenance</h2>
-        <p>We apologize for the inconvenience. Our website is currently under maintenance. Please check back later.</p>
+        <p>We apologize for the inconvenience. Our website is currently under maintenance .</p>
         <button class="close-button">Close</button>
       </div>
     `;
