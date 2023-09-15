@@ -1,0 +1,105 @@
+/* Contents of style.css */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add a blur effect to the gradient */
+.gradient {
+  --size: 400px;
+  --speed: 12s;
+
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 4));
+  background-image: linear-gradient(rgba(207, 38, 184, 0.85), #5b37eb);
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 700% 70% 70% 30%/30% 30% 70% 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure the gradient is behind the overlay */
+  backdrop-filter: blur(5px); /* Add blur effect to the gradient */
+}
+
+.overlay {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  background-image: url('new.png'); /* Replace with your overlay image path */
+  background-size: contain; /* Maintain image aspect ratio and fit within the container */
+  background-position: center center; /* Center the image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  opacity: 0.3; /* Adjust the opacity as needed */
+  z-index: 0; /* Ensure the overlay is behind the gradient */
+}
+
+@media (min-width: 1000px) {
+  .gradient {
+    --size: 200px;
+  }
+}
+
+body {
+  background-color: #222;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* This is just to transition when you change the viewport size. */
+* {
+  transition: all 0.25s ease-out;
+}
+
+/* Add styles for the header */
+header {
+  text-align: center; /* Center-align the contents within the header */
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center the header horizontally */
+  z-index: 1; /* Ensure the header is above the gradient */
+}
+
+/* Add styles for the popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure the popup is above other elements */
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup button {
+  background-color: #5b37eb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
