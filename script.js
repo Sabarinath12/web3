@@ -32,7 +32,7 @@ function getRandomColor() {
   updateGradientColor();
   
   // Update the gradient color every 5 seconds (5000 milliseconds)
-  setInterval(updateGradientColor, 5000);
+  setInterval(updateGradientColor, 2000);
   
   // Define a function to show the pop-up
   function showPopup() {
@@ -55,7 +55,7 @@ function getRandomColor() {
   }
   
   // Delay showing the pop-up only if the user stays for more than 2 seconds
-  let timeoutId = setTimeout(showPopup, 6000);
+  let timeoutId = setTimeout(showPopup, 4000);
   
   // Listen for user interaction events (e.g., mousemove, keydown)
   document.addEventListener("mousemove", handleUserInteraction);
