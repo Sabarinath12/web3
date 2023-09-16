@@ -32,7 +32,7 @@ function getRandomColor() {
   updateGradientColor();
   
   // Update the gradient color every 5 seconds (5000 milliseconds)
-  setInterval(updateGradientColor, 2000);
+  setInterval(updateGradientColor, 1000);
   
   // Define a function to show the pop-up
   function showPopup() {
