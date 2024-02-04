@@ -8,7 +8,7 @@
   }
 }
 
-/* Add a blur effect to the gradient */
+
 .gradient {
   --size: 400px;
   --speed: 12s;
@@ -23,22 +23,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1; /* Ensure the gradient is behind the overlay */
-  backdrop-filter: blur(5px); /* Add blur effect to the gradient */
+  z-index: -1; 
+  backdrop-filter: blur(5px); 
 }
 
 .overlay {
-  width: 200px; /* Fixed width */
-  height: 200px; /* Fixed height */
-  background-image: url('new.png'); /* Replace with your overlay image path */
-  background-size: contain; /* Maintain image aspect ratio and fit within the container */
-  background-position: center center; /* Center the image */
+  width: 200px; 
+  height: 200px; 
+  background-image: url('new.png'); 
+  background-size: contain; 
+  background-position: center center; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the element */
-  opacity: 0.3; /* Adjust the opacity as needed */
-  z-index: 0; /* Ensure the overlay is behind the gradient */
+  transform: translate(-50%, -50%); 
+  opacity: 0.3; 
+  z-index: 0; 
 }
 
 @media (min-width: 1000px) {
@@ -57,33 +57,33 @@ body {
   overflow: hidden;
 }
 
-/* This is just to transition when you change the viewport size. */
+
 * {
   transition: all 0.25s ease-out;
 }
 
-/* Add styles for the header */
+
 header {
-  text-align: center; /* Center-align the contents within the header */
+  text-align: center; 
   position: absolute;
-  top: 20px; /* Adjust the top position as needed */
+  top: 20px; 
   left: 50%;
-  transform: translateX(-50%); /* Center the header horizontally */
-  z-index: 1; /* Ensure the header is above the gradient */
+  transform: translateX(-50%);
+  z-index: 1; 
 }
 
-/* Add styles for the popup */
+
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; /* Ensure the popup is above other elements */
+  z-index: 2; 
 }
 
 .popup-content {
